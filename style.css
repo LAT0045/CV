@@ -5,7 +5,7 @@ body {
 }
 
 .content {
-    width: 60%;
+    max-width: 1000px;
     height: 1300px;
     margin: auto;
     background: white;
@@ -15,6 +15,8 @@ body {
 
     .left {
         width: 35%;
+        min-width: 300px;
+        max-width: 40%;
         height: auto;
         background: #C2F6F1;
         justify-items: center;
@@ -127,6 +129,8 @@ body {
 
     .right {
         width: 65%;
+        min-width: 300px;
+        max-width: 60%;
         height: auto;
         justify-items: center;
         display: flex;
@@ -345,7 +349,7 @@ body {
                         font-weight: bold;
                     }
 
-                    .c2{
+                    .c2 {
                         white-space: nowrap;
                         color: #FB7616;
                         font-size: 17px;
@@ -420,7 +424,7 @@ body {
 
                 }
 
-                .box-content{
+                .box-content {
                     width: 95%;
                     position: absolute;
                     display: flex;
@@ -456,23 +460,37 @@ body {
                 }
             }
 
-            .experience-content-2{
+            .experience-content-2 {
                 margin-top: 340px;
-                .box-content{
+
+                .box-content {
                     margin-top: 40px;
                 }
             }
-            .experience-content{
+
+            .experience-content {
                 margin-top: 60px;
-                .box-content{
+
+                .box-content {
                     margin-top: 10px;
                 }
             }
 
-            
+
 
         }
 
+    }
+
+    @media only screen and (max-width: 768px) {
+        .content {
+            flex-direction: column;
+        }
+    
+        .left, .right {
+            width: 100%;
+            max-width: 100%;
+        }
     }
 
 }
